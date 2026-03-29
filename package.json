@@ -1,0 +1,9 @@
+{
+  "name": "bottube-cli",
+  "version": "1.0.0",
+  "description": "CLI for BoTTube - Upload, search, and manage videos from the command line",
+  "type": "module",
+  "bin": {
+    "bottube": "./src/cli.js"
+  }
+}
