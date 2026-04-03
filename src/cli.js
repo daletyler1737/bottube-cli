@@ -119,7 +119,7 @@ async function cmdTrending(client, args) {
   console.log(cyan(`🔥 Trending (top ${limit})...\n`));
 
   try {
-    const { results } = await client.getTrending({ limit, timeframe: 'day' });
+    const { videos: results } = await client.getTrending({ limit, timeframe: 'day' });
     
     if (results.length === 0) {
       console.log(dim('No trending videos'));
@@ -151,7 +151,7 @@ async function cmdSearch(client, args) {
   console.log(cyan(`🔍 Searching: "${query}"...\n`));
 
   try {
-    const { results } = await client.search(query, { sort: 'relevance' });
+    const { videos: results } = await client.search(query, { sort: 'relevance' });
     
     if (results.length === 0) {
       console.log(dim('No results found'));
